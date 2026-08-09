@@ -1,0 +1,80 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif;color:#172033;background:#f7f9fc;line-height:1.8}.hero{min-height:620px;background:linear-gradient(135deg,#071a35 0%,#123e68 48%,#77a9c8 100%);color:#fff;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-160px;top:90px;background:rgba(255,255,255,.08);box-shadow:0 0 100px rgba(255,255,255,.08)}.nav{position:relative;z-index:2;max-width:1120px;margin:auto;padding:24px 28px;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:700;letter-spacing:.08em}.nav-links{display:flex;gap:26px}.nav a{color:#fff;text-decoration:none;font-size:14px;opacity:.9}.hero-content{position:relative;z-index:2;max-width:1120px;margin:110px auto 0;padding:0 28px}.eyebrow,.section-label{font-size:12px;letter-spacing:.22em;font-weight:700;opacity:.8}.hero h1{font-size:clamp(42px,7vw,82px);line-height:1.15;margin:18px 0}.lead{font-size:20px;opacity:.92}.button{display:inline-block;margin-top:24px;padding:12px 25px;border:1px solid rgba(255,255,255,.7);border-radius:999px;color:#fff;text-decoration:none}.section{max-width:1040px;margin:auto;padding:95px 28px}.section-label{color:#47779a}.section h2{font-size:clamp(28px,4vw,44px);line-height:1.35;margin:10px 0 25px;color:#13263d}.intro{max-width:760px;font-size:17px}.cards-section{padding-top:30px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:30px;box-shadow:0 10px 35px rgba(22,46,74,.06)}.card span{font-size:13px;color:#6d91aa;font-weight:700}.card h3{font-size:22px;margin:8px 0}.feature{display:grid;grid-template-columns:1.4fr .8fr;gap:55px;align-items:center}.quote-card{padding:36px;border-radius:20px;background:#e8f2f8;border:1px solid #d4e5ef}.quote-card p{font-size:25px;font-weight:700;color:#163c58;margin:0 0 10px}.quote-card span{font-size:14px}footer{background:#071a35;color:#dce8f0;padding:30px 28px}.footer-inner{max-width:1040px;margin:auto;display:flex;justify-content:space-between;gap:20px;font-size:13px}@media(max-width:760px){.nav{align-items:flex-start}.nav-links{display:none}.hero{min-height:590px}.hero-content{margin-top:95px}.lead{font-size:17px}.cards,.feature{grid-template-columns:1fr}.section{padding:70px 22px}.footer-inner{flex-direction:column}}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あるZARDファンの雑談</title>
+<meta name="description" content="ZARDをあまり知らない人にも、その魅力を気軽に知ってもらうためのファンサイト。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <nav class="nav">
+    <div class="logo">ZARDと歩く時間</div>
+    <div class="nav-links">
+      <a href="#about">このサイトについて</a>
+      <a href="#recommend">おすすめ曲</a>
+      <a href="#stories">ファンの感想</a>
+    </div>
+  </nav>
+  <div class="hero-content">
+    <p class="eyebrow">A PERSONAL ZARD FAN SITE</p>
+    <h1>ZARDと歩く時間</h1>
+    <p class="lead">ZARDをあまり知らない人にも、<br>「この曲、聴いてみたい」と思ってもらえるサイト。</p>
+    <a class="button" href="#about">サイトを見る</a>
+  </div>
+</header>
+
+<main>
+<section id="about" class="section">
+  <p class="section-label">ABOUT</p>
+  <h2>ここは、ZARDをもっと身近に感じてもらう場所。</h2>
+  <p class="intro">このサイトでは、個人的な感想を中心に、好きな曲、アルバム、ライブの思い出などを紹介していきます。詳しいファンだけでなく、ZARDを最近知った人にも楽しんでもらえるサイトを目指します。</p>
+</section>
+
+<section id="recommend" class="section cards-section">
+  <p class="section-label">MY FAVORITES</p>
+  <h2>まず聴いてほしい曲</h2>
+  <div class="cards">
+    <article class="card">
+      <span>01</span>
+      <h3>おすすめ曲</h3>
+      <p>「この曲からZARDを聴いてほしい」という一曲を、ファン目線で紹介します。</p>
+    </article>
+    <article class="card">
+      <span>02</span>
+      <h3>心に残る曲</h3>
+      <p>何度聴いても印象に残る曲を、個人的な感想とともに紹介します。</p>
+    </article>
+    <article class="card">
+      <span>03</span>
+      <h3>隠れた名曲</h3>
+      <p>シングル以外にも魅力的な曲がたくさんあります。少しずつ紹介していきます。</p>
+    </article>
+  </div>
+</section>
+
+<section id="stories" class="section feature">
+  <div>
+    <p class="section-label">FAN STORIES</p>
+    <h2>曲を聴いて、感じたこと。</h2>
+    <p>「この歌詞が好き」「この曲を聴くと、こんなことを思い出す」。そんな個人的な感想を、このサイトの中心にしていきます。</p>
+    <p>正解を並べるだけではなく、一人のファンが感じたZARDの魅力を残していきます。</p>
+  </div>
+  <div class="quote-card">
+    <p>「ZARDをもっと知りたい」</p>
+    <span>そんな人が最初に訪れるサイトへ。</span>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <strong>ZARDと歩く時間</strong>
+    <span>Personal ZARD Fan Site</span>
+  </div>
+</footer>
+</body>
+</html>
