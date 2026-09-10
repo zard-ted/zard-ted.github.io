@@ -17,12 +17,12 @@ a {
   text-decoration: none;
 }
 
-/* ヘッダー（高さを半分のコンパクトに指定） */
+/* ヘッダー（横浜夜景背景・高さを半分程度に調整） */
 .hero {
   background: linear-gradient(rgba(0, 20, 50, 0.4), rgba(10, 15, 30, 0.7)), url('background-image.jpg') no-repeat center center / cover;
   color: #ffffff;
-  padding: 30px 20px 40px;
-  min-height: 40vh; /* 高さを従来の約半分に縮小 */
+  padding: 30px 20px 50px;
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,14 +64,14 @@ a {
 }
 
 .eyebrow {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   letter-spacing: 0.2em;
   color: #a0c4ff;
   margin-bottom: 10px;
 }
 
 .hero-content h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   margin-bottom: 15px;
@@ -82,7 +82,7 @@ a {
   font-size: 1rem;
   margin-bottom: 25px;
   opacity: 0.95;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .button {
@@ -124,13 +124,13 @@ main {
 
 .section h2 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #111;
   letter-spacing: 0.03em;
 }
 
 .intro {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #555;
   font-size: 1rem;
 }
@@ -140,7 +140,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .card {
