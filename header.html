@@ -1,36 +1,95 @@
-<header>
-  <nav>
-    <div class="logo"><a href="index.html">ZARDと歩く時間（β版）</a></div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZARDと歩く時間（β版）</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            color: #fff;
+            background-color: #0b1329;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+        .logo { font-weight: bold; font-size: 1.1rem; text-decoration: none; color: #fff; }
+        .nav-categories { display: flex; gap: 30px; }
+        .nav-categories a { text-decoration: none; color: #fff; font-size: 0.95rem; opacity: 0.9; }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero-sub { font-size: 0.95rem; margin-bottom: 15px; opacity: 0.8; }
+        .hero h1 { font-size: 2.8rem; margin: 0 0 15px 0; }
+        .hero p { font-size: 1rem; margin: 0 0 35px 0; opacity: 0.85; }
+        .btn-view {
+            padding: 12px 35px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 30px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
 
-    <div class="nav-links">
-      <a href="about.html">管理人について（β版）</a>
-      <a href="column-index.html">コラム（β版）</a>
-      <a href="index.html#articles">コンテンツ（β版）</a>
-    </div>
-  </nav>
+    <div id="site-header"></div>
 
-  <div class="hero-content">
-    <p class="eyebrow">A PERSONAL ZARD FAN SITE（β版）</p>
+    <section class="hero">
+        <div class="hero-sub">A PERSONAL ZARD FAN SITE（β版）</div>
+        <h1 id="hero-title"></h1>
+        <p>ZARDをあまり知らない人に、より深くZARDを知ってほしい。（β版）</p>
+        <a href="#" class="btn-view">サイトを見る（β版）</a>
+    </section>
 
-    <!-- ここに各ページのタイトルが自動で入ります -->
-    <h1><span id="page-hero-title">ZARDと歩く時間（β版）</span></h1>
+    <script>
+        const pageData = {
+            "index.html": { title: "ZARDと歩く時間（β版）" },
+            "about.html": { title: "管理人について（β版）" },
+            "column.html": { title: "コラム（β版）" },
+            "contents.html": { title: "コンテンツ（β版）" }
+        };
 
-    <p class="lead">
-      ZARDをあまり知らない人に、より深くZARDを知ってほしい。（β版）
-    </p>
-  </div>
-</header>
+        let currentPath = window.location.pathname.split("/").pop();
+        if (currentPath === "" || !pageData[currentPath]) {
+            currentPath = "index.html";
+        }
 
-<script>
-  // 各個別ページのメインタイトルを自動でヘンリー部分（h1）に反映させるスクリプト
-  window.addEventListener('DOMContentLoaded', () => {
-    const heroTitleSpan = document.getElementById('page-hero-title');
-    if (heroTitleSpan) {
-      // トップページ（index.htmlなど）以外で、ページのh2タイトル等があればそれを取得して置き換える
-      const mainHeading = document.querySelector('main h2');
-      if (mainHeading && window.location.pathname !== '/' && !window.location.pathname.endsWith('index.html')) {
-        heroTitleSpan.textContent = mainHeading.textContent;
-      }
-    }
-  });
-</script>
+        document.getElementById('site-header').innerHTML = `
+            <header>
+                <a href="index.html" class="logo">ZARDと歩く時間（β版）</a>
+                <nav class="nav-categories">
+                    <a href="about.html">管理人について（β版）</a>
+                    <a href="column.html">コラム（β版）</a>
+                    <a href="contents.html">コンテンツ（β版）</a>
+                </nav>
+            </header>
+        `;
+
+        if (pageData[currentPath]) {
+            document.getElementById('hero-title').textContent = pageData[currentPath].title;
+            document.title = pageData[currentPath].title;
+        }
+    </script>
+
+</body>
+</html>
