@@ -34,7 +34,7 @@
 <body>
 
 <!-- 共通ヘッダー読み込みエリア -->
-<div id="header-include" data-title="新曲を初回に聴くときの超変態的聴き方"></div>
+<div id="header-include" data-title="ここにページのタイトルを書く"></div>
 
 <script>
   fetch('header.html')
@@ -44,11 +44,13 @@
       container.innerHTML = data;
       const title = container.getAttribute('data-title');
       if (title) {
-        document.getElementById('page-hero-title').innerText = title;
+        const titleElement = document.getElementById('page-hero-title');
+        if (titleElement) {
+          titleElement.innerText = title;
+        }
       }
     });
 </script>
-
 <main>
 
 <section class="section">
