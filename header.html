@@ -1,5 +1,5 @@
-<header class="hero">
-  <nav class="nav">
+<header>
+  <nav>
     <div class="logo"><a href="index.html">ZARDと歩く時間（β版）</a></div>
 
     <div class="nav-links">
@@ -18,7 +18,19 @@
     <p class="lead">
       ZARDをあまり知らない人に、より深くZARDを知ってほしい。（β版）
     </p>
-
-    <a href="index.html#articles" class="button">サイトを見る（β版）</a>
   </div>
 </header>
+
+<script>
+  // 各個別ページのメインタイトルを自動でヘンリー部分（h1）に反映させるスクリプト
+  window.addEventListener('DOMContentLoaded', () => {
+    const heroTitleSpan = document.getElementById('page-hero-title');
+    if (heroTitleSpan) {
+      // トップページ（index.htmlなど）以外で、ページのh2タイトル等があればそれを取得して置き換える
+      const mainHeading = document.querySelector('main h2');
+      if (mainHeading && window.location.pathname !== '/' && !window.location.pathname.endsWith('index.html')) {
+        heroTitleSpan.textContent = mainHeading.textContent;
+      }
+    }
+  });
+</script>
