@@ -19,32 +19,21 @@
 
 <body>
 
-<header class="hero">
+<!-- 共通ヘッダー読み込みエリア -->
+<div id="header-include" data-title="100曲以上歌えるようになったプロセス"></div>
 
-  <nav class="nav">
-    <div class="logo"><a href="index.html">ZARDと歩く時間（仮）</a></div>
-
-    <div class="nav-links">
-      <a href="about.html">管理人について</a>
-      <a href="column-index.html">コラム</a>
-      <a href="index.html#articles">コンテンツ</a>
-    </div>
-  </nav>
-
-  <div class="hero-content">
-    <p class="eyebrow">A PERSONAL ZARD FAN SITE</p>
-
-    <h1>2曲目 愛は暗闇の中で</h1>
-
-    <p class="lead">
-      ZARDをあまり知らない人に、より深くZARDを知ってほしい。
-    </p>
-
-    <a href="index.html#articles" class="button">サイトを見る</a>
-  </div>
-
-</header>
-
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      const container = document.getElementById('header-include');
+      container.innerHTML = data;
+      const title = container.getAttribute('data-title');
+      if (title) {
+        document.getElementById('page-hero-title').innerText = title;
+      }
+    });
+</script>
 
 <main>
 
@@ -132,17 +121,17 @@
 </main>
 
 
-<footer>
+<!-- 共通フッター読み込みエリア -->
+<div id="footer-include"></div>
 
-  <div class="footer-inner">
-
-    <strong>ZARDと歩く時間（仮）</strong>
-
-    <span>Personal ZARD Fan Site</span>
-
-  </div>
-
-</footer>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      const container = document.getElementById('footer-include');
+      container.innerHTML = data;
+    });
+</script>
 
 </body>
 </html>
