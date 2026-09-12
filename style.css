@@ -40,42 +40,33 @@ a {
 .logo a,
 .nav-links a {
   color: #fff;
-  text-decoration: none;
 }
 
 .logo a {
-  font-size: 1.35rem;
+  font-size: .68rem;
   font-weight: 700;
   letter-spacing: .04em;
 }
 
 /* トップページへのリンク */
 .home-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 14px;
-  border: 1px solid rgba(255, 255, 255, .75);
-  border-radius: 999px;
-  background: rgba(0, 0, 0, .18);
-  transition: background .2s, border-color .2s;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: opacity .2s;
 }
 
 .home-link:hover {
-  background: rgba(255, 255, 255, .18);
-  border-color: #fff;
+  opacity: .65;
 }
 
-.home-icon {
-  font-size: 1.1rem;
-}
-
-.home-text {
-  padding-left: 8px;
-  border-left: 1px solid rgba(255, 255, 255, .6);
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .08em;
+.nav-links a {
+  text-decoration: none;
 }
 
 .nav-links {
@@ -213,14 +204,6 @@ footer {
   .nav-links {
     gap: 12px;
     font-size: .86rem;
-  }
-
-  .home-link {
-    padding: 6px 10px;
-  }
-
-  .home-text {
-    font-size: .65rem;
   }
 
   .hero-content {
