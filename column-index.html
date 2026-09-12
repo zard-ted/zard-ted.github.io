@@ -16,24 +16,52 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div id="header-include"></div>
+
 <script>
 fetch('header.html').then(r=>r.text()).then(data=>{
   document.getElementById('header-include').innerHTML=data;
   document.getElementById('hero-title').textContent='コラム';
 });
 </script>
+
 <main>
 <section class="section">
   <p class="section-label">COLUMN</p>
   <h2>コラム</h2>
+
   <div class="cards">
-    <div class="card"><h3><a href="column-process.html">超変態的な歌詞を覚えたプロセス</a></h3></div>
-    <div class="card"><h3><a href="column-first-listen.html">新曲を初回に聴くときの超変態的聴き方</a></h3></div>
+
+    <div class="card">
+      <h3>
+        <a href="column-process.html">超変態的な歌詞を覚えたプロセス</a>
+      </h3>
+    </div>
+
+    <div class="card">
+      <h3>
+        <a href="column-first-listen.html">新曲を初回に聴くときの超変態的聴き方</a>
+      </h3>
+    </div>
+
+    <div class="card">
+      <h3>
+        <a href="column-bzone.html">B ZONEに向かって叫んだ二日後の出来事ｗ</a>
+      </h3>
+    </div>
+
   </div>
 </section>
 </main>
+
 <div id="footer-include"></div>
-<script>fetch('footer.html').then(r=>r.text()).then(data=>{document.getElementById('footer-include').innerHTML=data;});</script>
+
+<script>
+fetch('footer.html').then(r=>r.text()).then(data=>{
+  document.getElementById('footer-include').innerHTML=data;
+});
+</script>
+
 </body>
 </html>
