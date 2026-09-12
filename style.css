@@ -11,12 +11,16 @@ body {
   font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   line-height: 1.9;
   color: #222;
-  background: #fff;
+  background: #58BDD7;
 }
 
 a {
   color: inherit;
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   min-height: 300px;
@@ -48,7 +52,7 @@ a {
   letter-spacing: .04em;
 }
 
-/* トップページへのリンク */
+/* 左上 Zard Notes */
 .home-link {
   display: inline-block;
   padding: 0;
@@ -58,15 +62,14 @@ a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
-  transition: opacity .2s;
+  transition:
+    opacity .2s ease,
+    letter-spacing .2s ease;
 }
 
 .home-link:hover {
-  opacity: .65;
-}
-
-.nav-links a {
-  text-decoration: none;
+  opacity: .7;
+  letter-spacing: .08em;
 }
 
 .nav-links {
@@ -74,6 +77,26 @@ a {
   gap: 28px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width .25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .hero-content {
@@ -94,6 +117,8 @@ a {
   margin: 0 0 14px;
   font-size: clamp(1.4rem, 3.15vw, 2.66rem);
   line-height: 1.18;
+  letter-spacing: .03em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .28);
 }
 
 .lead {
@@ -106,13 +131,27 @@ a {
   display: inline-block;
   margin-top: 16px;
   padding: 8px 22px;
-  border: 1px solid currentColor;
+  border: 1px solid rgba(255, 255, 255, .8);
   border-radius: 999px;
   text-decoration: none;
+  background: rgba(0, 0, 0, .12);
+  transition:
+    background .2s ease,
+    transform .2s ease;
 }
+
+.button:hover {
+  background: rgba(255, 255, 255, .15);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   MAIN
+========================= */
 
 main {
   min-height: 45vh;
+  background: #58BDD7;
 }
 
 .section {
@@ -123,39 +162,116 @@ main {
 
 .section-label {
   margin: 0;
-  color: #777;
+  color: rgba(0, 0, 0, .55);
   font-size: .76rem;
-  letter-spacing: .22em;
+  font-weight: 600;
+  letter-spacing: .28em;
 }
 
 .section h2 {
-  margin: .25em 0 1.25em;
+  position: relative;
+  margin: .25em 0 1.5em;
+  padding-bottom: 13px;
   font-size: 2rem;
+  letter-spacing: .04em;
 }
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 3px;
+  background: #252b33;
+}
+
+/* =========================
+   CARDS
+========================= */
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 18px;
+  gap: 22px;
 }
 
 .card {
-  padding: 22px;
-  border: 1px solid #ddd;
+  position: relative;
+  min-height: 102px;
+  display: flex;
+  align-items: center;
+  padding: 24px 26px 24px 30px;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 5px;
   background: #fff;
+  box-shadow:
+    0 3px 7px rgba(0, 0, 0, .06),
+    0 10px 24px rgba(0, 0, 0, .08);
+  overflow: hidden;
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #253c4b;
+  transform: scaleY(.42);
+  transform-origin: center;
+  transition:
+    transform .22s ease,
+    width .22s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, .08),
+    0 16px 32px rgba(0, 0, 0, .11);
+}
+
+.card:hover::before {
+  width: 5px;
+  transform: scaleY(1);
 }
 
 .card h3 {
+  width: 100%;
   margin: 0;
   font-size: 1.05rem;
-  line-height: 1.6;
+  font-weight: 700;
+  line-height: 1.65;
+  letter-spacing: .015em;
 }
 
 .card a {
+  display: block;
+  width: 100%;
   text-decoration: none;
+  transition: transform .2s ease;
 }
 
+.card:hover a {
+  transform: translateX(3px);
+}
+
+/* =========================
+   ARTICLE
+========================= */
+
 .article-text {
+  padding: 36px 40px;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .08);
   white-space: pre-wrap;
   font-size: 1rem;
   line-height: 2;
@@ -176,9 +292,14 @@ main {
   text-decoration-thickness: 3px;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer {
   padding: 30px 6%;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid rgba(0, 0, 0, .12);
+  background: #58BDD7;
 }
 
 .footer-inner {
@@ -187,20 +308,24 @@ footer {
   gap: 18px;
 }
 
-/* フッターのトップページへのリンク */
 .footer-inner a {
   font-weight: 700;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
-  transition: opacity .2s;
+  transition: opacity .2s ease;
 }
 
 .footer-inner a:hover {
   opacity: .6;
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 720px) {
+
   .hero {
     min-height: 280px;
   }
@@ -221,6 +346,19 @@ footer {
 
   .section {
     padding: 56px 20px;
+  }
+
+  .cards {
+    gap: 15px;
+  }
+
+  .card {
+    min-height: 88px;
+    padding: 20px 20px 20px 25px;
+  }
+
+  .article-text {
+    padding: 25px 22px;
   }
 
   .footer-inner {
