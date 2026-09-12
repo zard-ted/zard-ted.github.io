@@ -180,11 +180,6 @@ main {
   overflow-wrap: anywhere;
 }
 
-.external-link::after {
-  content: " ↗";
-  font-size: .85em;
-}
-
 .external-link:hover {
   color: #003c8f;
   text-decoration-thickness: 3px;
