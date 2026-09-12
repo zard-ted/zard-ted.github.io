@@ -43,7 +43,7 @@ a {
 }
 
 .logo a {
-  font-size: .68rem;
+  font-size: .82rem;
   font-weight: 700;
   letter-spacing: .04em;
 }
@@ -187,8 +187,17 @@ footer {
   gap: 18px;
 }
 
+/* フッターのトップページへのリンク */
 .footer-inner a {
-  text-decoration: none;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: opacity .2s;
+}
+
+.footer-inner a:hover {
+  opacity: .6;
 }
 
 @media (max-width: 720px) {
