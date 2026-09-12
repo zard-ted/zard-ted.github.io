@@ -7,79 +7,45 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-7WCSOHRECR');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>新曲を初回に聴くときの超変態的聴き方 | ZARDと歩く時間（仮）</title>
-<meta name="description" content="管理人が若い頃、ZARDの新曲が出たときにやってしまった超変態的聴き方についてのエピソードです。">
+<title>新曲を初回に聴くときの超変態的聴き方 | Zard Notes</title>
+<meta name="description" content="ZARDの新曲を初回に聴くときの聴き方についてのコラム。">
 <link rel="stylesheet" href="style.css">
-<style>
-  /* 外部リンク用デザイン */
-  .x-link {
-    display: inline-block;
-    color: #1d9bf0;
-    font-weight: bold;
-    text-decoration: underline;
-    margin-top: 10px;
-    transition: opacity 0.2s;
-  }
-  .x-link:hover {
-    opacity: 0.7;
-  }
-</style>
 </head>
-
 <body>
 
-<!-- 共通ヘッダー読み込みエリア -->
-<div id="header-include" data-title="新曲を初回に聴くときの超変態的聴き方"></div>
-
+<div id="header-include"></div>
 <script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      const container = document.getElementById('header-include');
-      container.innerHTML = data;
-      const title = container.getAttribute('data-title');
-      if (title) {
-        const titleElement = document.getElementById('page-hero-title');
-        if (titleElement) {
-          titleElement.innerText = title;
-        }
-      }
-    });
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-include').innerHTML = data;
+    document.getElementById('hero-title').textContent = '新曲を初回に聴くときの超変態的聴き方';
+  });
 </script>
+
 <main>
+  <section class="section">
+    <div class="article-text">新曲を初回に聴くときの超変態的聴き方
+若い時にZARDを中毒のように聴きまくってた頃、新曲が出たときは、まずあまりにもサビが聴きたくて聴きたくて我慢ができず、頭から聴いてたらサビまで１分かかるから、そんなん絶対我慢でけへんから新曲を初回に聴くときだけ、気がせいて手がブルブル震えながら早送りして、まずサビを聴いて安心するという聴き方をしてました
 
-<section class="section">
+これが全ZARDファンの誰一人からも共感を得られない超変態的聴き方となりますｗｗ（おわり）
 
-  <h2>新曲を初回に聴くときの超変態的聴き方</h2>
-
-  <p class="intro">
-    若い時にZARDを中毒のように聴きまくってた頃、新曲が出たときは、まずあまりにもサビが聴きたくて聴きたくて我慢ができず、頭から聴いてたらサビまで１分かかるから、そんなん絶対我慢でけへんから新曲を初回に聴くときだけ、気がせいて手がブルブル震えながら早送りして、まずサビを聴いて安心するという聴き方をしてました<br>
-    <br>
-    これが全ZARDファンの誰一人からも共感を得られない超変態的聴き方となりますｗｗ（おわり）<br>
-    <br>
-    <a href="https://x.com/tedchan2014/status/1993605658307153923" class="x-link" target="_blank" rel="noopener noreferrer">元ポスト（X）を見る 🔗</a>
-  </p>
-
-</section>
-
+元ポスト（X）を見る
+[https://x.com/tedchan2014/status/1993605658307153923](https://x.com/tedchan2014/status/1993605658307153923)</div>
+  </section>
 </main>
 
-
-<!-- 共通フッター読み込みエリア -->
 <div id="footer-include"></div>
-
 <script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      const container = document.getElementById('footer-include');
-      container.innerHTML = data;
-    });
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-include').innerHTML = data;
+  });
 </script>
 
 </body>
