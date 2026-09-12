@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WCSOHRECR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7WCSOHRECR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZARDが心の拠り所だった | Zard Notes</title>
+<meta name="description" content="ZARDが心の拠り所だった">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header-include"></div>
+
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-include').innerHTML = data;
+    document.getElementById('hero-title').textContent = 'ZARDが心の拠り所だった';
+  });
+</script>
+
+<main>
+  <section class="section">
+    <div class="article-text">今まで特に言ってこなかったんで皆さんはご存じないでしょうが、こう見えても私って実はZARDファンなんです
+ 
+唯一好きだったアーチストが突然旅立たれた時は心の拠り所を失った悲しみでずっと寂しかった
+ 
+せやけど、いまだにオフィシャルが色々出してくれるZARDの４文字見るたび心が震える程嬉しい
+<a class="external-link" href="https://x.com/tedchan2014/status/1945075248400851236" target="_blank" rel="noopener noreferrer">https://x.com/tedchan2014/status/1945075248400851236</a></div>
+  </section>
+</main>
+
+<div id="footer-include"></div>
+
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-include').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>
