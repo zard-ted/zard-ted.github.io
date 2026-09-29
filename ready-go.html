@@ -1,3 +1,269 @@
+土曜日 17:19
+例えばこのページはINDEXに登録になったが
+今日 21:17
+INDEXに登録情報は出ないが検索で表示されるのはどうしてだ
+
+分かりました。ここから私がやります。
+
+ただし、今の状態ではGitHubのリポジトリを私が直接編集・コミットできる接続がありません。GitHubを接続していただければ、zard-ted/zard-ted.github.io を直接確認して、こちらでまとめて修正するところまで進められます。
+
+今回はこちらで、少なくとも次を一括で確認します。
+
+サイト全HTMLのSEO用 <title>
+meta description
+og:title
+og:description
+「個人的」という語をSEO部分から完全に排除
+ページごとのタイトル重複・不自然な定型文を整理
+canonical の確認
+favicon の確認
+GA4タグの確認
+sitemap.xml の全URL確認
+Google検索でタイトルが書き換えられにくい構成への整理
+必要なページについて、変更後の内容を私が確認
+
+Google自身も、検索結果のタイトルは <title> だけでなく、ページのメイン見出し、<h1>、og:title、ページ内の目立つテキストなど複数の情報から自動生成すると説明しています。したがって、1ページの <title> だけ直して終わりにはしません。
+
+まずGitHubを接続してください。
+
+接続できたら、リポジトリをこちらで確認して、
+最初から全部やり直します。
+あなたがHTMLを1ページずつ直す必要はありません。
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WCS0HRECR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WCS0HRECR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZARD「Oh! Sugar Baby」曲解説・歌詞考察｜ZARD全曲・作品記録｜ZARD Notes</title>
+<meta name="description" content="ZARD4曲目「Oh! Sugar Baby」の曲解説と歌詞考察。ZARDでは珍しい男性目線の歌詞、女性と男性の発言の区別、初期作ならではの歌詞の雰囲気、「噂」をテーマにしたZARD楽曲とのつながり、タイトルに「！」が付く曲について綴ります。">
+<meta name="keywords" content="ZARD,zard,Zard,ザード,ZARDノート,ZARD Notes,坂井泉水さん,ZARD全曲,ZARD歌詞,ZARD作品,ZARD聖地,ZARDファン,Oh! Sugar Baby,Oh Sugar Baby,男性目線の曲,ZARD初期作品,ZARD歌詞考察,Top Secret,こんなにそばに居るのに,Ready Go">
+<link rel="canonical" href="https://zard-ted.github.io/oh-sugar-baby.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ZARD Notes">
+<meta property="og:title" content="ZARD「Oh! Sugar Baby」曲解説・歌詞考察｜ZARD Notes">
+<meta property="og:description" content="ZARD4曲目「Oh! Sugar Baby」の曲解説と歌詞考察。珍しい男性目線の歌詞や初期作ならではの雰囲気、「噂」をテーマにした楽曲とのつながりについて綴ります。">
+<meta property="og:url" content="https://zard-ted.github.io/oh-sugar-baby.html">
+<meta property="og:locale" content="ja_JP">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header-include"></div>
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-include').innerHTML = data;
+    document.getElementById('hero-title').textContent = 'Oh! Sugar Baby';
+  });
+</script>
+
+<main>
+  <section class="section">
+    <div class="article-text">4曲目はOh! Sugar Babyです
+他のアーティストへの提供曲以外ではZARDでは珍しく、かつZARDで最初の男性目線の曲です
+
+これは歌詞を最初に見とかんかったら、女性側の発言がどこまでかが分かりにくい
+
+歌詞を見たら””で囲まれてて女性の発言範囲がわかんねんけど、歌詞見んかったから””の後の部分も意味合い的には女性の発言と考えてもおかしくないから、”彼女がこう言うんだ”と言われてもどこまでが彼女のセリフかがしばらく分からんかった
+
+せやけど何回も聴き続けてると歌詞を見んかっても、どこが女性の発言でどこが男性の発言かが分かってきます（続く）
+
+１曲目の時に、初期作やなーってほのぼの思う曲があるって言ってたけど、デビュー翌月のリリースのこの曲は歌詞の感じが初期作感を強く感じる
+
+私は歌詞のクオリティーとか分からんし、歌詞が良いとか悪いとかの話やないです
+例えばドラえもんとかサザエさんとか、初期の頃と直近のんとか絵の感じが全然ちゃうけど、どっちが良いとか悪いとかあれへんやん
+
+そんなんどっちも良いに決まってるし、人によっては初期の頃のほうが味があって良いとかいう人は絶対いる
+
+ただ、この歌詞が後期に来たら絶対に強い違和感を感じるはずです
+
+ZARDの歴史として個人的に味わい深さを感じる曲です（続く）
+
+Oh! Sugar Baby で”噂はいろいろあるよ”っていう歌詞があるが、Top Secretでは”友達（みんな）が反対してたの””噂聞いて”があって、こんなにそばに居るのにでは”どんな悲しいウワサも吹き飛ぶような”がある
+
+どの歌も、噂はパートナーに対するネガティブな噂やけど、結局人の噂とか気にせずに、自分の感覚でパートナーを選んでいる（もっともこの曲は男目線やけど）
+
+突然ですがクイズです
+この曲は！がタイトルについてますが、ZARDにはタイトルに！がついている曲が何曲あるでしょう？
+皆さん頭の中で考えておいてください明日答え言います（つづく）
+
+Oh! Sugar Baby
+Don't you see!
+Ready, Go!
+カラッといこう！の４曲でした
+
+あ、Ready, Go!で思い出したけど、この曲の時に全ZARDファンが深良いと思うであろう話をします
+あの場にいた人は絶対に記憶にある人いるはずです
+私は目の前で起きた出来事であまりにも面白悲しい出来事で強烈に記憶に残ってるw
+リリース順でコメントしてるんでこれは５９曲目です
+
+という事で４曲目は以上です
+次はリリース５曲目、”女でいたい”です
+
+お待たせしました。次こそ本当に１日で終わる曲なのでサクサク行きます（４曲目おしまい）</div>
+  </section>
+</main>
+
+<div id="footer-include"></div>
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-include').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WCS0HRECR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WCS0HRECR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZARD「女でいたい」個人的感想・歌詞考察｜ZARD全曲・作品記録｜ZARD Notes</title>
+<meta name="description" content="ZARD5曲目「女でいたい」の個人的な感想。川島だりあさん作詞作曲による初期ZARDの楽曲で、別れたばかりの彼への未練や、よりを戻したい女性の心情、初期作品に見られる大人びた歌詞の雰囲気について綴ります。">
+<meta name="keywords" content="ZARD,zard,Zard,ザード,ZARDノート,ZARD Notes,坂井泉水さん,ZARD全曲,ZARD歌詞,ZARD作品,ZARD聖地,ZARDファン,女でいたい,川島だりあ,ZARD初期作品,ZARD歌詞考察,ZARD5曲目,ZARD楽曲紹介">
+<link rel="canonical" href="https://zard-ted.github.io/onna-de-itai.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ZARD Notes">
+<meta property="og:title" content="ZARD「女でいたい」個人的感想・歌詞考察｜ZARD Notes">
+<meta property="og:description" content="ZARD5曲目「女でいたい」の個人的な感想。川島だりあさん作詞作曲による初期ZARDの楽曲と、別れたばかりの彼への未練や女性の心情について綴ります。">
+<meta property="og:url" content="https://zard-ted.github.io/onna-de-itai.html">
+<meta property="og:locale" content="ja_JP">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header-include"></div>
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-include').innerHTML = data;
+    document.getElementById('hero-title').textContent = '女でいたい';
+  });
+</script>
+
+<main>
+  <section class="section">
+    <div class="article-text">５曲目は、女でいたいです
+
+川島だりあさんの作詞作曲で、早くもZARD最後の坂井さん以外の作詞作品です
+軽い出会いの彼と別れたけど、別れたばかりでまだ未練が断ち切れず、よりを戻したいという女心を描いた歌です
+
+坂井さん作詞曲やないからあまり曲にコメントするつもりもないけど、エッチな曲です
+ZARDは初期の頃にはエッチな曲が割と多いです
+
+あ、女心って言ってますが、私は女心とか全くわからん単なるおっさんですｗ
+え？このギャグ飽きた？ｗ
+
+あ、ほんまに１日で終わったｗ</div>
+  </section>
+</main>
+
+<div id="footer-include"></div>
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-include').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WCS0HRECR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WCS0HRECR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZARD「女でいたい」曲解説・歌詞考察｜ZARD全曲・作品記録｜ZARD Notes</title>
+<meta name="description" content="ZARD5曲目「女でいたい」の曲解説と歌詞考察。川島だりあさん作詞作曲による初期ZARDの楽曲で、別れたばかりの彼への未練や、よりを戻したい女性の心情、初期作品に見られる大人びた歌詞の雰囲気について綴ります。">
+<meta name="keywords" content="ZARD,zard,Zard,ザード,ZARDノート,ZARD Notes,坂井泉水さん,ZARD全曲,ZARD歌詞,ZARD作品,ZARD聖地,ZARDファン,女でいたい,川島だりあ,ZARD初期作品,ZARD歌詞考察,ZARD5曲目,ZARD楽曲紹介">
+<link rel="canonical" href="https://zard-ted.github.io/onna-de-itai.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ZARD Notes">
+<meta property="og:title" content="ZARD「女でいたい」曲解説・歌詞考察｜ZARD Notes">
+<meta property="og:description" content="ZARD5曲目「女でいたい」の曲解説と歌詞考察。川島だりあさん作詞作曲による初期ZARDの楽曲と、別れたばかりの彼への未練や女性の心情について綴ります。">
+<meta property="og:url" content="https://zard-ted.github.io/onna-de-itai.html">
+<meta property="og:locale" content="ja_JP">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header-include"></div>
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-include').innerHTML = data;
+    document.getElementById('hero-title').textContent = '女でいたい';
+  });
+</script>
+
+<main>
+  <section class="section">
+    <div class="article-text">５曲目は、女でいたいです
+
+川島だりあさんの作詞作曲で、早くもZARD最後の坂井さん以外の作詞作品です
+軽い出会いの彼と別れたけど、別れたばかりでまだ未練が断ち切れず、よりを戻したいという女心を描いた歌です
+
+坂井さん作詞曲やないからあまり曲にコメントするつもりもないけど、エッチな曲です
+ZARDは初期の頃にはエッチな曲が割と多いです
+
+あ、女心って言ってますが、私は女心とか全くわからん単なるおっさんですｗ
+え？このギャグ飽きた？ｗ
+
+あ、ほんまに１日で終わったｗ</div>
+  </section>
+</main>
+
+<div id="footer-include"></div>
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-include').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>
+今日 7:18
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -22,6 +288,107 @@
 <meta property="og:site_name" content="ZARD Notes">
 <meta property="og:title" content="ZARD「Ready, Go!」個人的感想｜第1回追悼コンサートの記憶｜ZARD Notes">
 <meta property="og:description" content="ZARD59曲目「Ready, Go!」にまつわる個人的な思い出。2007年9月14日の第1回追悼コンサートで会場に響いた叫び声と、その場にいたファンの悲しみについて綴ります。">
+<meta property="og:url" content="https://zard-ted.github.io/ready-go.html">
+<meta property="og:locale" content="ja_JP">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header-include"></div>
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-include').innerHTML = data;
+    document.getElementById('hero-title').textContent = 'Ready, Go!';
+  });
+</script>
+
+<main>
+  <section class="section">
+    <div class="article-text">コメントを受け５曲目の前に５９曲目のReady, Go!いきます
+
+まだ衝撃の日から日も浅い2007年9月14日の第1回追悼コンサートの武道館で、私は上手側のかなり奥の方でステージを見下ろすような場所やった
+
+参加された方は覚えてはると思うけど、中盤だか後半しばらくした頃だったか曲と曲の合間に、なんかマニピュレーションの関係でやったんか10秒くらい、しーんってなった
+
+ほんだら、その時何を思ったか私の少し左斜め前くらいの当時の私と同世代くらいの若いにーちゃんが、『Ready, Go!やってーー！！！』って、その静かな中で大声で叫んだｗｗｗ（続く）
+
+当時セットリストという言葉すら知らんかった私ですら、（ちょｗｗそりゃさすがに無理やろｗｗｗ）って思た
+
+坂井さんの追悼コンサートは最近はファンの心も以前より落ち着いて、ファンはコンサートを楽しんでるがいつも厳かな雰囲気は変わらへん
+
+せやけど全ZARDファンが衝撃を受けた、わずか３か月余り後にまだ現実を受け止められない中で行われた第一回の追悼コンサートはごっつい重い雰囲気で皆楽しむというよりお通夜のような感じやった
+
+ほんでそんな中で会場が静まり返った時に武道館の１５０００人のZARDファンの中で唯一あのReady, Go!にーちゃんは叫び声をあげた（続く）
+
+厳かな追悼コンサートであのように叫んでる人を見たのはあのにーちゃんだけです
+
+『Ready, Go!やってーー！！！』って叫ばれた時、きっと大藪さんとか大賀さんとかは(無茶ゆーなっｗｗｗ)って思われたでしょうｗ
+
+さすがに今頃になってビルボードみたいなところで、そんな風に叫んだら皆絶対怒るはずです
+
+あの静謐な環境で行われる追悼コンサートであのように叫んだり、セットリストに要望を出す猛者はもう今後二度と現れないでしょうｗｗｗ
+
+せやけど悲しみの中で行われた初めての追悼コンサートで、あのにーちゃんはやり場のない悲しみをぶつけたかったんでしょう（続く）
+
+昨日この叫びを覚えてる方からのコメントで覚えている人がいると分かって嬉しい！
+
+ああいうとこは静かな時は遠くの咳払いでも聞こえるのでやはり全員聞いたはずです
+
+そのにーちゃんが一回叫んだ後もまだしばらくしーーんってしてたから、再度『Ready, Go!おねがーいー！』だかなんだか悲痛に叫んだと記憶してる
+
+この曲にどんな思い入れがあんのか知らんけど最後のほうは呟くように『頼むーー』って懇願してたが、何もなかったかのように次の曲が始まりにーちゃんはほんまに残念そうに肩を落として悲しんでいた
+
+私はこのにーちゃんの悲しみが痛いほどよくわかりました（次回最終回へ続く）
+
+そのにーちゃんの願いは届かず結局最後までReady, Go!はあれへんかった
+
+彼は私の数列前の斜め左くらいの位置にいたので、私は強烈に印象に残っている
+
+きっと今でも彼はZARDファンでいてくれてるでしょう
+
+せやけどあの時のにーちゃんの悲しみが痛いほどわかるので、その悲しみが自分自身の悲しみと重なります
+
+名も知らんその愛すべきReady, Go!にーちゃんの悲しげな叫び声とあの時の寂しそうな後ろ姿が頭をよぎり、私は今でもReady, Go!を聴いてると、めっちゃ明るい曲にもかかわらず涙がこぼれてきます（おしまい）</div>
+  </section>
+</main>
+
+<div id="footer-include"></div>
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-include').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WCS0HRECR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WCS0HRECR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZARD「Ready, Go!」思い出・第1回追悼コンサートの記憶｜ZARD Notes</title>
+<meta name="description" content="ZARD59曲目「Ready, Go!」にまつわる思い出。2007年9月14日に日本武道館で開催された第1回追悼コンサートで、静まり返った会場に響いた「Ready, Go!やってーー！！！」という叫び声と、その場にいたファンの悲しみについて綴ります。">
+<meta name="keywords" content="ZARD,zard,Zard,ザード,ZARDノート,ZARD Notes,坂井泉水さん,ZARD全曲,ZARD歌詞,ZARD作品,ZARD聖地,ZARDファン,Ready Go!,Ready,Go!,ZARD59曲目,ZARD追悼コンサート,2007年9月14日,日本武道館,ZARDファンの思い出,ZARDライブ,坂井泉水さん追悼コンサート">
+<link rel="canonical" href="https://zard-ted.github.io/ready-go.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ZARD Notes">
+<meta property="og:title" content="ZARD「Ready, Go!」思い出・第1回追悼コンサートの記憶｜ZARD Notes">
+<meta property="og:description" content="ZARD59曲目「Ready, Go!」にまつわる思い出。2007年9月14日の第1回追悼コンサートで会場に響いた叫び声と、その場にいたファンの悲しみについて綴ります。">
 <meta property="og:url" content="https://zard-ted.github.io/ready-go.html">
 <meta property="og:locale" content="ja_JP">
 <link rel="stylesheet" href="style.css">
