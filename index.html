@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -28,6 +29,50 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zard-ted.github.io/">
   <meta property="og:site_name" content="ZARD Notes">
+
+  <!-- 構造化データ（JSON-LD） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://zard-ted.github.io/#website",
+        "url": "https://zard-ted.github.io/",
+        "name": "ZARDノート",
+        "alternateName": "ZARD Notes",
+        "description": "ZARD全152曲と坂井泉水さんの音源がCDで残っている10曲、全162曲の独自解説や感想、歌詞考察、ZARDに関するコラムを順次アーカイブするファンサイト。",
+        "inLanguage": "ja",
+        "publisher": {
+          "@id": "https://zard-ted.github.io/#author"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://zard-ted.github.io/#author",
+        "name": "ZARDノート管理人",
+        "sameAs": [
+          "https://x.com/tedchan2014"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://zard-ted.github.io/#webpage",
+        "url": "https://zard-ted.github.io/",
+        "name": "ZARD全曲解説・歌詞考察・作品紹介｜坂井泉水さん全曲",
+        "description": "ZARD Notesは、長年ZARDを聴き続けてきた管理人によるファンサイトです。ZARD全152曲と坂井泉水さんの音源がCDで残っている10曲、全162曲の独自解説や感想、歌詞考察、ZARDに関するコラムを順次アーカイブしています。",
+        "isPartOf": {
+          "@id": "https://zard-ted.github.io/#website"
+        },
+        "about": {
+          "@type": "MusicGroup",
+          "name": "ZARD"
+        },
+        "inLanguage": "ja"
+      }
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
@@ -361,3 +406,4 @@ fetch('footer.html')
 </body>
 
 </html>
+```
