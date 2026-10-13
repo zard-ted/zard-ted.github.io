@@ -62,32 +62,29 @@
       border-collapse: collapse;
       font-size: 0.95rem;
       line-height: 1.6;
-      border: 1px solid #e5e7eb;
     }
 
     .song-list-table th,
     .song-list-table td {
-      border: 1px solid #e5e7eb;
-      padding: 8px 12px;
+      border: 1px solid #ddd;
+      padding: 8px 10px;
       text-align: left;
-      vertical-align: middle;
+      vertical-align: top;
     }
 
     .song-list-table th {
-      background: #f8fafc; /* 上品でスマートな薄いグレー背景 */
-      color: #334155;
-      font-weight: 600;
+      background: #f3f3f3;
       white-space: nowrap;
     }
 
-    /* 偶数行はごくごく控えめな微差の背景色にして目を疲れさせない */
+    /* 変更点：目がチカチカしないよう、ごくごく薄い上品な差分（#fcfcfc）に設定 */
     .song-list-table tbody tr:nth-child(even) {
-      background-color: #fbfbfc;
+      background-color: #fcfcfc;
     }
 
-    /* ホバー時も主張しすぎないスマートな薄い色 */
+    /* 変更点：ホバー時も主張しすぎないスマートな薄いグレー（#f8fafc） */
     .song-list-table tbody tr:hover {
-      background-color: #f1f5f9;
+      background-color: #f8fafc;
     }
 
     .song-list-table td:first-child {
@@ -108,7 +105,7 @@
 
     .song-list-table a:hover {
       color: #1d4ed8;
-      background-color: #eff6ff;
+      background-color: #f1f5f9;
       text-decoration: none;
     }
   </style>
