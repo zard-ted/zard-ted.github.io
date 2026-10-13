@@ -66,25 +66,31 @@
 
     .song-list-table th,
     .song-list-table td {
-      border: 1px solid #ddd;
+      border: 1px solid #dbeafe;
       padding: 8px 10px;
       text-align: left;
       vertical-align: top;
     }
 
     .song-list-table th {
-      background: #f3f3f3;
+      background: #dbeafe !important;
+      color: #1e3a8a;
       white-space: nowrap;
     }
 
-    /* 変更点：目がチカチカしないよう、ごくごく薄い上品な差分（#fcfcfc）に設定 */
-    .song-list-table tbody tr:nth-child(even) {
-      background-color: #fcfcfc;
+    /* 奇数行：白に近いごく薄い青 */
+    .song-list-table tbody tr:nth-child(odd) {
+      background-color: #f8fafc !important;
     }
 
-    /* 変更点：ホバー時も主張しすぎないスマートな薄いグレー（#f8fafc） */
+    /* 偶数行：ほんの少しだけそれより濃い青 */
+    .song-list-table tbody tr:nth-child(even) {
+      background-color: #eff6ff !important;
+    }
+
+    /* マウスホバー時のハイライトを解除（何も変化させない） */
     .song-list-table tbody tr:hover {
-      background-color: #f8fafc;
+      background-color: inherit !important;
     }
 
     .song-list-table td:first-child {
@@ -96,16 +102,15 @@
       white-space: nowrap;
     }
 
-    /* 内部リンクの視認性をスマートに確保 */
+    /* 内部リンクの表示 */
     .song-list-table a {
-      color: #2563eb;
+      color: #1d4ed8;
       text-decoration: underline;
       font-weight: 500;
     }
 
     .song-list-table a:hover {
-      color: #1d4ed8;
-      background-color: #f1f5f9;
+      color: #1e40af;
       text-decoration: none;
     }
   </style>
