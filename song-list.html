@@ -53,23 +53,23 @@
     .song-list-wrap {
       width: 100%;
       overflow-x: auto;
-      margin: 2rem 0;
+      margin: 1rem 0; /* マージンを削減 */
     }
 
     .song-list-table {
       width: 100%;
       min-width: 720px;
       border-collapse: collapse;
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-size: 0.9rem; /* フォントサイズを少しコンパクトに */
+      line-height: 1.4; /* 行間を狭めて縦幅を縮小 */
     }
 
     .song-list-table th,
     .song-list-table td {
       border: 1px solid #ddd;
-      padding: 8px 10px;
+      padding: 4px 8px; /* パディングを少なくして縦の大きさを削減 */
       text-align: left;
-      vertical-align: top;
+      vertical-align: middle; /* 上寄せから中央寄せにしてすっきり見せる */
     }
 
     .song-list-table th {
@@ -86,8 +86,17 @@
       white-space: nowrap;
     }
 
+    /* 内部リンクの視認性を向上（色、下線、ホバー時の変化） */
     .song-list-table a {
+      color: #0066cc;
       text-decoration: underline;
+      font-weight: 500;
+    }
+
+    .song-list-table a:hover {
+      color: #003366;
+      background-color: #e6f0fa;
+      text-decoration: none;
     }
   </style>
 </head>
