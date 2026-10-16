@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -113,6 +114,23 @@
       color: #1e40af;
       text-decoration: none;
     }
+
+    /* サイトの作成時期・更新状況 */
+    .site-update-note {
+      margin: 0 0 1.5rem;
+      line-height: 1.8;
+    }
+
+    .site-update-note a {
+      color: #1d4ed8;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    .site-update-note a:hover {
+      color: #1e40af;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -142,6 +160,12 @@ fetch('header.html')
 
 <main>
   <section class="section">
+
+    <p class="site-update-note">
+      このサイトは2026年9月に作成し、2026年現在、リリース順に加筆継続しており、現在進行中のウェブサイトです。
+      <a href="https://x.com/tedchan2014" target="_blank" rel="noopener noreferrer">@tedchan2014（X）</a>
+    </p>
+
     <div class="song-list-wrap">
       <table class="song-list-table">
         <thead>
