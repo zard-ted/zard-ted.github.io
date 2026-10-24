@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -51,6 +50,7 @@
   </script>
 
   <style>
+    /* パソコン用：既存の設定をそのまま維持 */
     .song-list-wrap {
       width: 100%;
       overflow-x: auto;
@@ -89,7 +89,7 @@
       background-color: #eff6ff !important;
     }
 
-    /* マウスホバー時のハイライトを解除（何も変化させない） */
+    /* マウスホバー時のハイライトを解除 */
     .song-list-table tbody tr:hover {
       background-color: inherit !important;
     }
@@ -130,6 +130,117 @@
     .site-update-note a:hover {
       color: #1e40af;
       text-decoration: none;
+    }
+
+    /* スマートフォン用：600px以下だけに適用 */
+    @media screen and (max-width: 600px) {
+      .song-list-wrap {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: visible;
+        margin: 1.25rem 0;
+      }
+
+      /* スマホでは固定幅を解除 */
+      .song-list-table {
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+        border-collapse: separate;
+        border-spacing: 0;
+        font-size: 0.9rem;
+      }
+
+      /* 表の見出し行を隠す */
+      .song-list-table thead {
+        display: none;
+      }
+
+      .song-list-table,
+      .song-list-table tbody {
+        display: block;
+        width: 100%;
+      }
+
+      /* 1曲ずつカード形式で表示 */
+      .song-list-table tbody tr {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 0 0.85rem;
+        padding: 0.35rem 0.75rem;
+        border: 1px solid #dbeafe;
+        border-radius: 8px;
+        overflow-wrap: anywhere;
+      }
+
+      .song-list-table tbody tr:nth-child(odd),
+      .song-list-table tbody tr:nth-child(even) {
+        background-color: #f8fafc !important;
+      }
+
+      /* 各項目を縦方向に並べる */
+      .song-list-table tbody tr td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.35rem 0;
+        border: 0;
+        text-align: left;
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+
+      /* リリース順番 */
+      .song-list-table td:first-child {
+        text-align: left;
+        color: #475569;
+        font-size: 0.82rem;
+      }
+
+      .song-list-table td:first-child::before {
+        content: "リリース順番：";
+        font-weight: 600;
+      }
+
+      /* リリース年月日 */
+      .song-list-table td:nth-child(2)::before {
+        content: "リリース年月日：";
+        font-weight: 600;
+      }
+
+      /* タイトル */
+      .song-list-table td:nth-child(3) {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .song-list-table td:nth-child(3)::before {
+        content: "タイトル：";
+        font-weight: 600;
+        color: #334155;
+      }
+
+      /* ZARD以外の曲の説明 */
+      .song-list-table td:nth-child(4):not(:empty) {
+        color: #475569;
+        font-size: 0.85rem;
+      }
+
+      .song-list-table td:nth-child(4):not(:empty)::before {
+        content: "説明：";
+        font-weight: 600;
+      }
+
+      /* スマホの左右の余白 */
+      .section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .site-update-note {
+        overflow-wrap: anywhere;
+      }
     }
   </style>
 </head>
