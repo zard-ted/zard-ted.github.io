@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WCS0HRECR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7WCS0HRECR');
+  </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WCS0HRECR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7WCS0HRECR');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ZARD全曲一覧リスト・作品紹介｜坂井泉水さん全曲一覧リスト</title>
+  <title>ZARD全曲一覧リスト・作品紹介｜坂井泉水さん全曲一覧リスト｜ZARDノート</title>
 
-  <meta name="description" content="ZARD Notesは、長年ZARDを聴き続けてきた管理人によるファンサイトです。ZARD全152曲と坂井泉水さんの音源がCDで残っている10曲、全162曲の独自解説や感想、歌詞考察、ZARDに関するコラムを順次アーカイブしています。">
+  <meta name="description" content="ZARDノートは、長年ZARDを聴き続けてきた管理人によるファンサイトです。ZARD全152曲と坂井泉水さんの音源がCDで残っている10曲、全162曲の独自解説や感想、歌詞考察、ZARDに関するコラムを順次アーカイブしています。">
 
-  <meta name="keywords" content="ZARD, zard, Zard, ザード, ZARDノート, ZARD Notes, 坂井泉水さん, 坂井泉水さん全曲, ZARD全曲, ZARD歌詞, ZARD作品, ZARD聖地, ZARDファン, ZARDファンサイト, ZARD楽曲, ZARDコラム, ZARD未公開曲">
+  <meta name="keywords" content="ZARD,ザード,ZARDノート,坂井泉水さん,坂井泉水さん全曲,ZARD全曲,ZARD歌詞,ZARD作品,ZARD聖地,ZARDファン,ZARDファンサイト,ZARD楽曲,ZARDコラム,ZARD未公開曲">
 
   <link rel="canonical" href="https://zard-ted.github.io/">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
 
-  <meta property="og:title" content="ZARD全曲解説・歌詞考察・作品紹介｜坂井泉水さん全曲">
+  <meta property="og:title" content="ZARD全曲解説・歌詞考察・作品紹介｜ZARDノート">
   <meta property="og:description" content="長年ZARDを聴き続けてきた管理人によるファンサイト。ZARD全152曲と坂井泉水さんの音源がCDで残っている10曲、全162曲の独自解説や感想、歌詞考察、ZARDに関するコラムを順次アーカイブしています。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zard-ted.github.io/">
-  <meta property="og:site_name" content="ZARD Notes">
+  <meta property="og:site_name" content="ZARDノート">
 
   <!-- 構造化データ（JSON-LD） -->
   <script type="application/ld+json">
@@ -39,7 +39,6 @@
         "@id": "https://zard-ted.github.io/#website",
         "url": "https://zard-ted.github.io/",
         "name": "ZARDノート",
-        "alternateName": "ZARD Notes",
         "description": "ZARD全152曲と坂井泉水さんの音源がCDで残っている10曲、全162曲の独自解説や感想、歌詞考察、ZARDに関するコラムを順次アーカイブするファンサイト。",
         "inLanguage": "ja",
         "publisher": {
@@ -58,8 +57,8 @@
         "@type": "WebPage",
         "@id": "https://zard-ted.github.io/#webpage",
         "url": "https://zard-ted.github.io/",
-        "name": "ZARD全曲解説・歌詞考察・作品紹介｜坂井泉水さん全曲",
-        "description": "ZARD Notesは、長年ZARDを聴き続けてきた管理人によるファンサイトです。ZARD全152曲と坂井泉水さんの音源がCDで残っている10曲、全162曲の独自解説や感想、歌詞考察、ZARDに関するコラムを順次アーカイブしています。",
+        "name": "ZARD全曲解説・歌詞考察・作品紹介｜ZARDノート",
+        "description": "ZARD全152曲と坂井泉水さんの音源がCDで残っている10曲、全162曲の独自解説や感想、歌詞考察、ZARDに関するコラムを順次アーカイブしています。",
         "isPartOf": {
           "@id": "https://zard-ted.github.io/#website"
         },
@@ -73,14 +72,31 @@
   }
   </script>
 
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 解説ページへのリンクがある曲：落ち着いた青灰色 */
+    #articles .card h3 a,
+    #articles .card h3 a:visited {
+      color: #536b7a;
+      text-decoration: underline;
+      text-decoration-color: #aab8c2;
+      text-underline-offset: 3px;
+    }
 
+    #articles .card h3 a:hover {
+      color: #354d5c;
+    }
+
+    /* 更新状況 */
+    .contents-update-note {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
 </head>
 
-
 <body>
-
 
 <!-- 共通ヘッダー -->
 <div id="header-include"></div>
@@ -89,33 +105,31 @@
 fetch('header.html')
   .then(response => response.text())
   .then(data => {
-
     document.getElementById('header-include').innerHTML = data;
 
-    document.getElementById('hero-title').textContent = 'ZARDノート';
+    const heroTitle = document.getElementById('hero-title');
+    if (heroTitle) heroTitle.textContent = 'ZARDノート';
 
-    document.getElementById('hero-description').innerHTML = `
-      <p class="lead">
-        長年ZARDだけを聴き続けて来た私が、特に若いZARDファンの方々に、<br>
-        よりZARDの曲を理解してより味わっていただくことを目的として、<br>
-        私がXで投稿している未公開曲なども含めてZARD全曲の解説をアーカイブしています。<br>
-        2026年現在、ZARD全曲に向けて順次追加を進行中です。<br>
-        詳しくは管理人のXをご覧ください。
-      </p>
-    `;
-
-  });
+    const heroDescription = document.getElementById('hero-description');
+    if (heroDescription) {
+      heroDescription.innerHTML = `
+        <p class="lead">
+          長年ZARDだけを聴き続けて来た私が、特に若いZARDファンの方々に、<br>
+          よりZARDの曲を理解してより味わっていただくことを目的として、<br>
+          私がXで投稿している未公開曲なども含めてZARD全曲の解説をアーカイブしています。<br>
+          2026年現在、ZARD全曲に向けて順次追加を進行中です。<br>
+          詳しくは管理人のXをご覧ください。
+        </p>
+      `;
+    }
+  })
+  .catch(error => console.error(error));
 </script>
-
-
 
 <main>
 
-
 <section class="section">
-
   <p class="section-label">ABOUT</p>
-
   <h2>ごあいさつ</h2>
 
   <p class="intro">
@@ -134,270 +148,222 @@ fetch('header.html')
   <p>
     <a href="about.html" class="button">管理人について</a>
   </p>
-
 </section>
-
-
 
 <section class="section" id="articles">
-
   <p class="section-label">CONTENTS</p>
-
   <h2>コンテンツ</h2>
 
+  <p class="contents-update-note">2026年現在、Xにて更新継続中</p>
 
   <div class="cards">
 
-
-    <div class="card">
-      <h3>
-        <a href="goodbye-my-loneliness.html">
-          1曲目 Good-bye My Loneliness
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="ai-ha-kurayami-no-naka-de.html">
-          2曲目 愛は暗闇の中で
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="koionna-no-yuuutsu.html">
-          3曲目 恋女の憂鬱
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="oh-sugar-baby.html">
-          4曲目 Oh! Sugar Baby
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="onna-de-itai.html">
-          5曲目 女でいたい
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="its-a-boy.html">
-          6曲目 It's a Boy
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="fushigine.html">
-          7曲目 不思議ね…
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="sunoa-ni-ienakute.html">
-          8曲目 素直に言えなくて
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="mou-sagasanai.html">
-          9曲目 もう探さない
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="konnani-aishitemo.html">
-          10曲目 こんなに愛しても
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="hitoriga-suki.html">
-          11曲目 ひとりが好き
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="forever.html">
-          12曲目 Forever
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="lonely-soldier-boy.html">
-          13曲目 Lonely Soldier Boy
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="itsukawa.html">
-          14曲目 いつかは…
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="this-masquerade.html">
-          15曲目 This Masquerade
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="nemurenai-yoru-wo-daite.html">
-          16曲目 眠れない夜を抱いて
-        </a>
-      </h3>
-    </div>
-
-
-    <div class="card">
-      <h3>
-        <a href="ready-go.html">
-          59曲目 Ready, Go!
-        </a>
-      </h3>
-    </div>
-
+    <div class="card"><h3><a href="goodbye-my-loneliness.html">1曲目 Good-bye My Loneliness</a></h3></div>
+    <div class="card"><h3><a href="ai-ha-kurayami-no-naka-de.html">2曲目 愛は暗闇の中で</a></h3></div>
+    <div class="card"><h3><a href="koionna-no-yuuutsu.html">3曲目 恋女の憂鬱</a></h3></div>
+    <div class="card"><h3><a href="oh-sugar-baby.html">4曲目 Oh! Sugar Baby</a></h3></div>
+    <div class="card"><h3><a href="onna-de-itai.html">5曲目 女でいたい</a></h3></div>
+    <div class="card"><h3><a href="its-a-boy.html">6曲目 It's a Boy</a></h3></div>
+    <div class="card"><h3><a href="fushigine.html">7曲目 不思議ね…</a></h3></div>
+    <div class="card"><h3><a href="sunoa-ni-ienakute.html">8曲目 素直に言えなくて</a></h3></div>
+    <div class="card"><h3><a href="mou-sagasanai.html">9曲目 もう探さない</a></h3></div>
+    <div class="card"><h3><a href="konnani-aishitemo.html">10曲目 こんなに愛しても</a></h3></div>
+    <div class="card"><h3><a href="hitoriga-suki.html">11曲目 ひとりが好き</a></h3></div>
+    <div class="card"><h3><a href="forever.html">12曲目 Forever</a></h3></div>
+    <div class="card"><h3><a href="lonely-soldier-boy.html">13曲目 Lonely Soldier Boy</a></h3></div>
+    <div class="card"><h3><a href="itsukawa.html">14曲目 いつかは…</a></h3></div>
+    <div class="card"><h3><a href="this-masquerade.html">15曲目 This Masquerade</a></h3></div>
+    <div class="card"><h3><a href="nemurenai-yoru-wo-daite.html">16曲目 眠れない夜を抱いて</a></h3></div>
+    <div class="card"><h3>17曲目 Dangerous Tonight</h3></div>
+    <div class="card"><h3>18曲目 誰かが待ってる</h3></div>
+    <div class="card"><h3>19曲目 サヨナラ言えなくて</h3></div>
+    <div class="card"><h3>20曲目 あの微笑みを忘れないで</h3></div>
+    <div class="card"><h3>21曲目 好きなように踊りたいの</h3></div>
+    <div class="card"><h3>22曲目 Why Don't You Leave Me Alone</h3></div>
+    <div class="card"><h3>23曲目 愛は眠ってる</h3></div>
+    <div class="card"><h3>24曲目 遠い日のNostalgia</h3></div>
+    <div class="card"><h3>25曲目 So Together</h3></div>
+    <div class="card"><h3>26曲目 IN MY ARMS TONIGHT</h3></div>
+    <div class="card"><h3>27曲目 汗の中でCRY</h3></div>
+    <div class="card"><h3>28曲目 負けないで</h3></div>
+    <div class="card"><h3>29曲目 Stray Love</h3></div>
+    <div class="card"><h3>30曲目 君がいない</h3></div>
+    <div class="card"><h3>31曲目 私だけ見つめて</h3></div>
+    <div class="card"><h3>32曲目 揺れる想い</h3></div>
+    <div class="card"><h3>33曲目 Just for you</h3></div>
+    <div class="card"><h3>34曲目 果てしない夢を</h3></div>
+    <div class="card"><h3>35曲目 Season</h3></div>
+    <div class="card"><h3>36曲目 あなたを好きだけど</h3></div>
+    <div class="card"><h3>37曲目 Listen to me</h3></div>
+    <div class="card"><h3>38曲目 You and me (and…)</h3></div>
+    <div class="card"><h3>39曲目 I want you</h3></div>
+    <div class="card"><h3>40曲目 二人の夏</h3></div>
+    <div class="card"><h3>41曲目 もう少し あと少し...</h3></div>
+    <div class="card"><h3>42曲目 カナリヤ</h3></div>
+    <div class="card"><h3>43曲目 きっと忘れない</h3></div>
+    <div class="card"><h3>44曲目 黄昏にMy Lonely Heart</h3></div>
+    <div class="card"><h3>45曲目 この愛に泳ぎ疲れても</h3></div>
+    <div class="card"><h3>46曲目 Boy</h3></div>
+    <div class="card"><h3>47曲目 Oh my love</h3></div>
+    <div class="card"><h3>48曲目 Top Secret</h3></div>
+    <div class="card"><h3>49曲目 雨に濡れて</h3></div>
+    <div class="card"><h3>50曲目 I still remember</h3></div>
+    <div class="card"><h3>51曲目 If you gimme smile</h3></div>
+    <div class="card"><h3>52曲目 来年の夏も</h3></div>
+    <div class="card"><h3>53曲目 あなたに帰りたい</h3></div>
+    <div class="card"><h3>54曲目 こんなにそばに居るのに</h3></div>
+    <div class="card"><h3>55曲目 あなたのせいじゃない</h3></div>
+    <div class="card"><h3>56曲目 あなたを感じていたい</h3></div>
+    <div class="card"><h3>57曲目 Take me to your dream</h3></div>
+    <div class="card"><h3>58曲目 Just believe in love</h3></div>
+    <div class="card"><h3><a href="ready-go.html">59曲目 Ready, Go!</a></h3></div>
+    <div class="card"><h3>60曲目 今すぐ会いに来て</h3></div>
+    <div class="card"><h3>61曲目 ハイヒール脱ぎ捨てて</h3></div>
+    <div class="card"><h3>62曲目 Forever you</h3></div>
+    <div class="card"><h3>63曲目 もう逃げたりしないわ 想い出から</h3></div>
+    <div class="card"><h3>64曲目 気楽に行こう</h3></div>
+    <div class="card"><h3>65曲目 I'm in love</h3></div>
+    <div class="card"><h3>66曲目 瞳そらさないで</h3></div>
+    <div class="card"><h3>67曲目 愛が見えない</h3></div>
+    <div class="card"><h3>68曲目 Teenage dream</h3></div>
+    <div class="card"><h3>69曲目 サヨナラは今もこの胸に居ます</h3></div>
+    <div class="card"><h3>70曲目 眠り</h3></div>
+    <div class="card"><h3>71曲目 マイ フレンド</h3></div>
+    <div class="card"><h3>72曲目 目覚めた朝は…</h3></div>
+    <div class="card"><h3>73曲目 心を開いて</h3></div>
+    <div class="card"><h3>74曲目 Change my mind</h3></div>
+    <div class="card"><h3>75曲目 君がいたから</h3></div>
+    <div class="card"><h3>76曲目 LOVE ～眠れずに君の横顔ずっと見ていた～</h3></div>
+    <div class="card"><h3>77曲目 DAN DAN 心魅かれてく</h3></div>
+    <div class="card"><h3>78曲目 突然</h3></div>
+    <div class="card"><h3>79曲目 今日も</h3></div>
+    <div class="card"><h3>80曲目 Today is another day</h3></div>
+    <div class="card"><h3>81曲目 見つめていたいね</h3></div>
+    <div class="card"><h3>82曲目 Don't you see!</h3></div>
+    <div class="card"><h3>83曲目 帰らぬ時間の中で</h3></div>
+    <div class="card"><h3>84曲目 君に逢いたくなったら…</h3></div>
+    <div class="card"><h3>85曲目 愛を信じていたい</h3></div>
+    <div class="card"><h3>86曲目 風が通り抜ける街へ</h3></div>
+    <div class="card"><h3>87曲目 遠い星を数えて</h3></div>
+    <div class="card"><h3>88曲目 永遠</h3></div>
+    <div class="card"><h3>89曲目 I can't let go</h3></div>
+    <div class="card"><h3>90曲目 My Baby Grand 〜ぬくもりが欲しくて〜</h3></div>
+    <div class="card"><h3>91曲目 Love is Gone</h3></div>
+    <div class="card"><h3>92曲目 息もできない</h3></div>
+    <div class="card"><h3>93曲目 Vintage</h3></div>
+    <div class="card"><h3>94曲目 運命のルーレット廻して</h3></div>
+    <div class="card"><h3>95曲目 少女の頃に戻ったみたいに</h3></div>
+    <div class="card"><h3>96曲目 新しいドア 〜冬のひまわり〜</h3></div>
+    <div class="card"><h3>97曲目 GOOD DAY</h3></div>
+    <div class="card"><h3>98曲目 WAKE UP MAKE THE MORNING LAST ～忘れがたき人へ～</h3></div>
+    <div class="card"><h3>99曲目 Brand New Love</h3></div>
+    <div class="card"><h3>100曲目 I feel fine, yeah</h3></div>
+    <div class="card"><h3>101曲目 フォトグラフ</h3></div>
+    <div class="card"><h3>102曲目 Can't Take My Eyes Off Of You</h3></div>
+    <div class="card"><h3>103曲目 MIND GAMES</h3></div>
+    <div class="card"><h3>104曲目 Hypnosis</h3></div>
+    <div class="card"><h3>105曲目 世界はきっと未来の中</h3></div>
+    <div class="card"><h3>106曲目 痛いくらい君があふれているよ</h3></div>
+    <div class="card"><h3>107曲目 この涙 星になれ</h3></div>
+    <div class="card"><h3>108曲目 お・も・ひ・で</h3></div>
+    <div class="card"><h3>109曲目 Get U're Dream</h3></div>
+    <div class="card"><h3>110曲目 promised you</h3></div>
+    <div class="card"><h3>111曲目 The only truth I know is you</h3></div>
+    <div class="card"><h3>112曲目 窓の外はモノクローム</h3></div>
+    <div class="card"><h3>113曲目 明日もし君が壊れても</h3></div>
+    <div class="card"><h3>114曲目 hero</h3></div>
+    <div class="card"><h3>115曲目 時間の翼</h3></div>
+    <div class="card"><h3>116曲目 クリスマス タイム (ZARD Version)</h3></div>
+    <div class="card"><h3>117曲目 抱きしめていて</h3></div>
+    <div class="card"><h3>118曲目 Seven Rainbow</h3></div>
+    <div class="card"><h3>119曲目 さわやかな君の気持ち</h3></div>
+    <div class="card"><h3>120曲目 約束のない恋</h3></div>
+    <div class="card"><h3>121曲目 明日を夢見て</h3></div>
+    <div class="card"><h3>122曲目 探しに行こうよ</h3></div>
+    <div class="card"><h3>123曲目 Black Velvet (IZUMI SAKAI)</h3></div>
+    <div class="card"><h3>124曲目 瞳閉じて</h3></div>
+    <div class="card"><h3>125曲目 愛しい人よ～名もなき旅人よ～</h3></div>
+    <div class="card"><h3>126曲目 異邦人</h3></div>
+    <div class="card"><h3>127曲目 もっと近くで君の横顔見ていたい</h3></div>
+    <div class="card"><h3>128曲目 リセット</h3></div>
+    <div class="card"><h3>129曲目 pray</h3></div>
+    <div class="card"><h3>130曲目 出逢いそして別れ</h3></div>
+    <div class="card"><h3>131曲目 止まっていた時計が今動き出した</h3></div>
+    <div class="card"><h3>132曲目 愛であなたを救いましょう</h3></div>
+    <div class="card"><h3>133曲目 天使のような笑顔で</h3></div>
+    <div class="card"><h3>134曲目 悲しいほど 今日は雨でも</h3></div>
+    <div class="card"><h3>135曲目 かけがえのないもの</h3></div>
+    <div class="card"><h3>136曲目 無我夢中</h3></div>
+    <div class="card"><h3>137曲目 今日はゆっくり話そう</h3></div>
+    <div class="card"><h3>138曲目 淡い雪がとけて</h3></div>
+    <div class="card"><h3>139曲目 雨が降り出す前に</h3></div>
+    <div class="card"><h3>140曲目 星のかがやきよ</h3></div>
+    <div class="card"><h3>141曲目 夏を待つセイル（帆）のように</h3></div>
+    <div class="card"><h3>142曲目 サヨナラまでのディスタンス</h3></div>
+    <div class="card"><h3>143曲目 君とのふれあい</h3></div>
+    <div class="card"><h3>144曲目 セパレート・ウェイズ</h3></div>
+    <div class="card"><h3>145曲目 Last Good-bye</h3></div>
+    <div class="card"><h3>146曲目 月に願いを</h3></div>
+    <div class="card"><h3>147曲目 あなたと共に生きてゆく</h3></div>
+    <div class="card"><h3>148曲目 I can't tell</h3></div>
+    <div class="card"><h3>149曲目 good-night sweetheart</h3></div>
+    <div class="card"><h3>150曲目 君と今日の事を一生忘れない</h3></div>
+    <div class="card"><h3>151曲目 悲しいほど貴方が好き</h3></div>
+    <div class="card"><h3>152曲目 カラッといこう！</h3></div>
+    <div class="card"><h3>153曲目 ハートに火をつけて</h3></div>
+    <div class="card"><h3>154曲目 君へのブルース</h3></div>
+    <div class="card"><h3>155曲目 グロリアス マインド</h3></div>
+    <div class="card"><h3>156曲目 翼を広げて</h3></div>
+    <div class="card"><h3>157曲目 さらば青春の影よ</h3></div>
+    <div class="card"><h3>158曲目 蜃気楼</h3></div>
+    <div class="card"><h3>159曲目 Demoー2</h3></div>
+    <div class="card"><h3>160曲目 少しづつ 少しづつ</h3></div>
+    <div class="card"><h3>161曲目 これからの君に乾杯</h3></div>
+    <div class="card"><h3>162曲目 夏の恋はいつもドラマティック</h3></div>
 
   </div>
-
 </section>
-
-
 
 <section class="section">
-
   <p class="section-label">COLUMN</p>
-
   <h2>コラム</h2>
 
-
   <div class="cards">
-
-
     <div class="card">
-      <h3>
-        <a href="column-process.html">
-          100曲以上のZARDの歌詞を覚えた超変態的プロセスｗ
-        </a>
-      </h3>
+      <h3><a href="column-process.html">100曲以上のZARDの歌詞を覚えた超変態的プロセスｗ</a></h3>
     </div>
 
-
     <div class="card">
-      <h3>
-        <a href="column-first-listen.html">
-          ZARD新曲を初回に聴く時だけしてた超変態的聴き方ｗ
-        </a>
-      </h3>
+      <h3><a href="column-first-listen.html">ZARD新曲を初回に聴く時だけしてた超変態的聴き方ｗ</a></h3>
     </div>
 
-
     <div class="card">
-      <h3>
-        <a href="column-bzone.html">
-          B ZONEに向かって叫んだ二日後の奇跡の出来事ｗ
-        </a>
-      </h3>
+      <h3><a href="column-bzone.html">B ZONEに向かって叫んだ二日後の奇跡の出来事ｗ</a></h3>
     </div>
 
-
     <div class="card">
-      <h3>
-        <a href="column-mod-studio.html">
-          ZARD聖地のMOD STUDIO跡地が巻き込まれた地面師事件
-        </a>
-      </h3>
+      <h3><a href="column-mod-studio.html">ZARD聖地のMOD STUDIO跡地が巻き込まれた地面師事件</a></h3>
     </div>
 
-
     <div class="card">
-      <h3>
-        <a href="column-pacific-venus.html">
-          1997年のZARDライブが行われた旧ぱしふぃっくびいなすに関する情報
-        </a>
-      </h3>
+      <h3><a href="column-pacific-venus.html">1997年のZARDライブが行われた旧ぱしふぃっくびいなすに関する情報</a></h3>
     </div>
 
-
     <div class="card">
-      <h3>
-        <a href="column-10000-zard-fans.html">
-          何故か１万人のZARDファンに読まれた投稿ｗ
-        </a>
-      </h3>
+      <h3><a href="column-10000-zard-fans.html">何故か１万人のZARDファンに読まれた投稿ｗ</a></h3>
     </div>
 
-
     <div class="card">
-      <h3>
-        <a href="column-30years-tears.html">
-          ZARDに出会って３０年ほどしたある日の出来事での涙
-        </a>
-      </h3>
+      <h3><a href="column-30years-tears.html">ZARDに出会って３０年ほどしたある日の出来事での涙</a></h3>
     </div>
 
-
     <div class="card">
-      <h3>
-        <a href="column-zard-kokoro.html">
-          ZARDが心の拠り所だった
-        </a>
-      </h3>
+      <h3><a href="column-zard-kokoro.html">ZARDが心の拠り所だった</a></h3>
     </div>
-
-
   </div>
-
 </section>
 
-
 </main>
-
-
 
 <!-- 共通フッター -->
 <div id="footer-include"></div>
@@ -407,10 +373,9 @@ fetch('footer.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('footer-include').innerHTML = data;
-  });
+  })
+  .catch(error => console.error(error));
 </script>
 
-
 </body>
-
 </html>
