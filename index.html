@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -74,10 +73,20 @@
   </script>
 
   <style>
-    /* 解説ページへのリンクがある曲名は、常に青色・下線付きで表示 */
+    /* リンクがあるカードは、常時淡い青灰色の背景にする */
+    #articles .card:has(h3 a),
+    section.section .card:has(h3 a) {
+      background: #edf3f8;
+      border-color: #c7d7e5;
+    }
+
+    /* リンク文字は常時、青色と下線で表示する */
     #articles .card h3 a,
     #articles .card h3 a:link,
-    #articles .card h3 a:visited {
+    #articles .card h3 a:visited,
+    section.section .card h3 a,
+    section.section .card h3 a:link,
+    section.section .card h3 a:visited {
       color: #174ea6 !important;
       text-decoration: underline !important;
       text-decoration-color: #174ea6 !important;
@@ -85,29 +94,40 @@
       text-underline-offset: 4px;
     }
 
-    /* マウスを載せたときもリンクと分かる表示を維持 */
+    /* マウスを載せたとき・キーボードで選択したとき */
     #articles .card h3 a:hover,
-    #articles .card h3 a:focus-visible {
+    #articles .card h3 a:focus-visible,
+    section.section .card h3 a:hover,
+    section.section .card h3 a:focus-visible {
       color: #003c8f !important;
       text-decoration-thickness: 2px;
     }
 
-    /* 更新状況：コンテンツ見出しと同じ文字サイズ・色 */
-    .contents-update-note {
-      display: inline;
-      margin: 0;
-      padding: 0;
-      font-size: inherit;
-      color: inherit;
-      font-weight: inherit;
+    /* リンクがあるカードの左側にアクセントを付ける */
+    #articles .card:has(h3 a)::before,
+    section.section .card:has(h3 a)::before {
+      background: #174ea6;
     }
 
-    /* コンテンツ見出しと更新状況を同じ行に表示 */
+    /* CONTENTSの更新表示 */
     .contents-heading {
       display: flex;
       align-items: baseline;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 0.5rem;
+    }
+
+    .contents-update-note {
+      font-size: inherit;
+      color: inherit;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .contents-heading {
+        column-gap: 0.4rem;
+        row-gap: 0.2rem;
+      }
     }
   </style>
 </head>
@@ -167,11 +187,12 @@ fetch('header.html')
 </section>
 
 <section class="section" id="articles">
-  <p class="section-label">CONTENTS</p>
-  <div class="contents-heading">
-    <h2>コンテンツ</h2>
-    <p class="contents-update-note">（2026年現在、Xにて更新継続中）</p>
-  </div>
+  <p class="section-label contents-heading">
+    <span>CONTENTS</span>
+    <span class="contents-update-note">（2026年現在、Xにて更新継続中）</span>
+  </p>
+
+  <h2>コンテンツ</h2>
 
   <div class="cards">
 
@@ -396,4 +417,3 @@ fetch('footer.html')
 
 </body>
 </html>
-```
