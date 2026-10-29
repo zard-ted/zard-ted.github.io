@@ -73,29 +73,32 @@
   </script>
 
   <style>
-    /* リンクがあるコンテンツ・コラム：サンプル画像の色 */
+    /* リンクがあるコンテンツ・コラム：正確な背景色 */
     #articles .card:has(h3 a),
     section.section:not(#articles) .card:has(h3 a) {
-      background-color: #E5E1D2;
-      border: 1px solid #D8D0C3;
-      border-left: 4px solid #BFAA60;
+      background-color: #E5E2D5;
+      border: 1px solid #D6CFC1;
+      border-left: 4px solid #BDA972;
     }
 
-    /* リンクがあるカードのタイトル */
+    /* リンクがある箇所の文字スタイル：太文字・青文字・下線付き */
     #articles .card:has(h3 a) h3 a,
     #articles .card:has(h3 a) h3 a:visited,
     section.section:not(#articles) .card:has(h3 a) h3 a,
-    section.section:not(#articles) .card:has(h3 a) h3 a:visited {
-      color: #33302B;
-      font-weight: 700;
-      text-decoration: underline;
-      text-decoration-color: #8E8578;
+    section.section:not(#articles) .card:has(h3 a) h3 a:visited,
+    section.section a:not(.button) {
+      color: #0066CC !important;
+      font-weight: 700 !important;
+      text-decoration: underline !important;
       text-underline-offset: 3px;
     }
 
+    /* ホバー時（マウスを乗せた際）の表現 */
     #articles .card:has(h3 a) h3 a:hover,
-    section.section:not(#articles) .card:has(h3 a) h3 a:hover {
-      color: #000000;
+    section.section:not(#articles) .card:has(h3 a) h3 a:hover,
+    section.section a:not(.button):hover {
+      color: #004499 !important;
+      text-decoration: underline !important;
     }
   </style>
 </head>
