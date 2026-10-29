@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -73,14 +74,14 @@
   </script>
 
   <style>
-    /* リンクがあるカードは、常時淡い青灰色の背景にする */
+    /* リンク先があるカードだけ、淡い青灰色の背景にする */
     #articles .card:has(h3 a),
     section.section .card:has(h3 a) {
-      background: #edf3f8;
-      border-color: #c7d7e5;
+      background-color: #f0f4f7;
+      border-color: #d5dfe7;
     }
 
-    /* リンク文字は常時、青色と下線で表示する */
+    /* リンク先がある曲・コラムのタイトルを太字にする */
     #articles .card h3 a,
     #articles .card h3 a:link,
     #articles .card h3 a:visited,
@@ -88,13 +89,14 @@
     section.section .card h3 a:link,
     section.section .card h3 a:visited {
       color: #174ea6 !important;
+      font-weight: 700 !important;
       text-decoration: underline !important;
       text-decoration-color: #174ea6 !important;
       text-decoration-thickness: 1px;
       text-underline-offset: 4px;
     }
 
-    /* マウスを載せたとき・キーボードで選択したとき */
+    /* マウスを載せたとき */
     #articles .card h3 a:hover,
     #articles .card h3 a:focus-visible,
     section.section .card h3 a:hover,
@@ -103,31 +105,10 @@
       text-decoration-thickness: 2px;
     }
 
-    /* リンクがあるカードの左側にアクセントを付ける */
+    /* リンク先があるカードの左側にアクセントを付ける */
     #articles .card:has(h3 a)::before,
     section.section .card:has(h3 a)::before {
-      background: #174ea6;
-    }
-
-    /* CONTENTSの更新表示 */
-    .contents-heading {
-      display: flex;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .contents-update-note {
-      font-size: inherit;
-      color: inherit;
-      margin: 0;
-    }
-
-    @media (max-width: 600px) {
-      .contents-heading {
-        column-gap: 0.4rem;
-        row-gap: 0.2rem;
-      }
+      background-color: #174ea6;
     }
   </style>
 </head>
@@ -187,12 +168,8 @@ fetch('header.html')
 </section>
 
 <section class="section" id="articles">
-  <p class="section-label contents-heading">
-    <span>CONTENTS</span>
-    <span class="contents-update-note">（2026年現在、Xにて更新継続中）</span>
-  </p>
-
-  <h2>コンテンツ</h2>
+  <p class="section-label">CONTENTS</p>
+  <h2>コンテンツ（2026年現在、Xにて更新継続中）</h2>
 
   <div class="cards">
 
