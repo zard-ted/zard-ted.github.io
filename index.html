@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -73,25 +74,40 @@
   </script>
 
   <style>
-    /* 解説ページへのリンクがある曲：落ち着いた青灰色 */
+    /* 解説ページへのリンクがある曲名は、常に青色・下線付きで表示 */
     #articles .card h3 a,
+    #articles .card h3 a:link,
     #articles .card h3 a:visited {
-      color: #536b7a;
-      text-decoration: underline;
-      text-decoration-color: #aab8c2;
-      text-underline-offset: 3px;
+      color: #174ea6 !important;
+      text-decoration: underline !important;
+      text-decoration-color: #174ea6 !important;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
     }
 
-    #articles .card h3 a:hover {
-      color: #354d5c;
+    /* マウスを載せたときもリンクと分かる表示を維持 */
+    #articles .card h3 a:hover,
+    #articles .card h3 a:focus-visible {
+      color: #003c8f !important;
+      text-decoration-thickness: 2px;
     }
 
-    /* 更新状況 */
+    /* 更新状況：コンテンツ見出しと同じ文字サイズ・色 */
     .contents-update-note {
-      font-size: 0.8rem;
-      color: #666;
-      margin-top: -0.5rem;
-      margin-bottom: 1.5rem;
+      display: inline;
+      margin: 0;
+      padding: 0;
+      font-size: inherit;
+      color: inherit;
+      font-weight: inherit;
+    }
+
+    /* コンテンツ見出しと更新状況を同じ行に表示 */
+    .contents-heading {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
     }
   </style>
 </head>
@@ -152,9 +168,10 @@ fetch('header.html')
 
 <section class="section" id="articles">
   <p class="section-label">CONTENTS</p>
-  <h2>コンテンツ</h2>
-
-  <p class="contents-update-note">2026年現在、Xにて更新継続中</p>
+  <div class="contents-heading">
+    <h2>コンテンツ</h2>
+    <p class="contents-update-note">（2026年現在、Xにて更新継続中）</p>
+  </div>
 
   <div class="cards">
 
@@ -379,3 +396,4 @@ fetch('footer.html')
 
 </body>
 </html>
+```
