@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -74,41 +73,29 @@
   </script>
 
   <style>
-    /* リンク先があるカードだけ、淡い青灰色の背景にする */
+    /* リンクがあるコンテンツ・コラム：画像に合わせた背景色 */
     #articles .card:has(h3 a),
-    section.section .card:has(h3 a) {
-      background-color: #f0f4f7;
-      border-color: #d5dfe7;
+    section.section:not(#articles) .card:has(h3 a) {
+      background-color: #EAE4D9;
+      border: 1px solid #D8D0C3;
+      border-left: 4px solid #BDB3A3;
     }
 
-    /* リンク先がある曲・コラムのタイトルを太字にする */
-    #articles .card h3 a,
-    #articles .card h3 a:link,
-    #articles .card h3 a:visited,
-    section.section .card h3 a,
-    section.section .card h3 a:link,
-    section.section .card h3 a:visited {
-      color: #174ea6 !important;
-      font-weight: 700 !important;
-      text-decoration: underline !important;
-      text-decoration-color: #174ea6 !important;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
+    /* リンクがあるカードのタイトル */
+    #articles .card:has(h3 a) h3 a,
+    #articles .card:has(h3 a) h3 a:visited,
+    section.section:not(#articles) .card:has(h3 a) h3 a,
+    section.section:not(#articles) .card:has(h3 a) h3 a:visited {
+      color: #33302B;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: #8E8578;
+      text-underline-offset: 3px;
     }
 
-    /* マウスを載せたとき */
-    #articles .card h3 a:hover,
-    #articles .card h3 a:focus-visible,
-    section.section .card h3 a:hover,
-    section.section .card h3 a:focus-visible {
-      color: #003c8f !important;
-      text-decoration-thickness: 2px;
-    }
-
-    /* リンク先があるカードの左側にアクセントを付ける */
-    #articles .card:has(h3 a)::before,
-    section.section .card:has(h3 a)::before {
-      background-color: #174ea6;
+    #articles .card:has(h3 a) h3 a:hover,
+    section.section:not(#articles) .card:has(h3 a) h3 a:hover {
+      color: #000000;
     }
   </style>
 </head>
@@ -169,7 +156,7 @@ fetch('header.html')
 
 <section class="section" id="articles">
   <p class="section-label">CONTENTS</p>
-  <h2>コンテンツ（2026年現在、Xにて更新継続中）</h2>
+  <h2>コンテンツ（2026年現在、更新継続中）</h2>
 
   <div class="cards">
 
