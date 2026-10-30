@@ -65,6 +65,19 @@
   }
   </script>
   <style>
+    /* クローラーにリンクを読ませつつ、画面上からは完全に隠す設定 */
+    .seo-crawler-links {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     /* リンクがあるコンテンツ・コラム：正確な背景色 */
     #articles .card:has(h3 a),
     section.section:not(#articles) .card:has(h3 a) {
@@ -93,21 +106,42 @@
   </style>
 </head>
 <body>
-<!-- 共通ヘッダー -->
-<div id="header-include">
-  <header>
-    <h1 id="hero-title">ZARDノート</h1>
-    <div id="hero-description">
-      <p class="lead">
-        長年ZARDだけを聴き続けて来た私が、特に若いZARDファンの方々に、<br>
-        よりZARDの曲を理解してより味わっていただくことを目的として、<br>
-        私がXで投稿している未公開曲なども含めてZARD全曲の解説をアーカイブしています。<br>
-        2026年現在、ZARD全曲に向けて順次追加を進行中です。<br>
-        詳しくは管理人のXをご覧ください。
-      </p>
-    </div>
-  </header>
+
+<!-- ▼ クローラー（サチコ）に確実に内部リンクを認知させるための静的記述（画面には表示されません） -->
+<div class="seo-crawler-links">
+  <nav>
+    <a href="song-list.html">全曲リスト</a>
+    <a href="column-index.html">コラム</a>
+    <a href="about.html">管理人について</a>
+    <a href="https://x.com/tedchan2014">X（旧Twitter）</a>
+  </nav>
 </div>
+<!-- ▲ ここまで -->
+
+<!-- 共通ヘッダー -->
+<div id="header-include"></div>
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-include').innerHTML = data;
+    const heroTitle = document.getElementById('hero-title');
+    if (heroTitle) heroTitle.textContent = 'ZARDノート';
+    const heroDescription = document.getElementById('hero-description');
+    if (heroDescription) {
+      heroDescription.innerHTML = `
+        <p class="lead">
+          長年ZARDだけを聴き続けて来た私が、特に若いZARDファンの方々に、<br>
+          よりZARDの曲を理解してより味わっていただくことを目的として、<br>
+          私がXで投稿している未公開曲なども含めてZARD全曲の解説をアーカイブしています。<br>
+          2026年現在、ZARD全曲に向けて順次追加を進行中です。<br>
+          詳しくは管理人のXをご覧ください。
+        </p>
+      `;
+    }
+  })
+  .catch(error => console.error(error));
+</script>
 <main>
 <section class="section">
   <h2>ごあいさつ</h2>
@@ -262,7 +296,7 @@
     <div class="card"><h3>132曲目 愛であなたを救いましょう</h3></div>
     <div class="card"><h3>133曲目 天使のような笑顔で</h3></div>
     <div class="card"><h3>134曲目 悲しいほど 今日は雨でも</h3></div>
-    <div class="card"><h3>135曲目 かけがえのないもの</h3></div>
+    <div class="card"><b>135曲目 かけがえのないもの</b></div>
     <div class="card"><h3>136曲目 無我夢中</h3></div>
     <div class="card"><h3>137曲目 今日はゆっくり話そう</h3></div>
     <div class="card"><h3>138曲目 淡い雪がとけて</h3></div>
@@ -324,8 +358,14 @@
 </section>
 </main>
 <!-- 共通フッター -->
-<div id="footer-include">
-  <footer></footer>
-</div>
+<div id="footer-include"></div>
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-include').innerHTML = data;
+  })
+  .catch(error => console.error(error));
+</script>
 </body>
 </html>
