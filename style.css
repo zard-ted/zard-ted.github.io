@@ -1,4 +1,4 @@
-* {
+{
   box-sizing: border-box;
 }
 
@@ -294,6 +294,45 @@ main {
 }
 
 /* =========================
+   曲移動ナビゲーション（追加・修正箇所）
+========================= */
+
+.song-navigation {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  margin-top: 2rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 1px solid #dbeafe !important;
+  gap: 10px !important;
+}
+
+.song-navigation a {
+  color: #174ea6 !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+  text-decoration-color: #174ea6 !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 4px !important;
+  white-space: nowrap !important;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.song-navigation a:hover {
+  color: #003c8f !important;
+  opacity: .8;
+}
+
+/* 1曲目で前の曲がない場合のプレースホルダー */
+.song-nav-placeholder {
+  visibility: hidden;
+  width: 0;
+  overflow: hidden;
+}
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -364,10 +403,12 @@ footer {
 
   .footer-inner {
     flex-direction: column;
+  }
 
+}
 
-    /* =========================
-   曲名リンク：常にリンクと分かる表示
+/* =========================
+   曲名リンク：常にリンクと分かる表示（カード用）
 ========================= */
 
 .card a,
@@ -384,6 +425,4 @@ footer {
 .card a:focus-visible {
   color: #003c8f !important;
   text-decoration-thickness: 2px;
-}
-  }
 }
