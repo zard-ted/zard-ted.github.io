@@ -294,7 +294,7 @@ main {
 }
 
 /* =========================
-   曲移動ナビゲーション（追加・修正箇所）
+   曲移動ナビゲーション
 ========================= */
 
 .song-navigation {
@@ -403,6 +403,25 @@ footer {
 
   .footer-inner {
     flex-direction: column;
+  }
+
+  /* スマホのときはナビゲーションを縦並びにする */
+  .song-navigation {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    text-align: center !important;
+  }
+
+  .song-navigation a {
+    white-space: normal !important;
+    padding: 8px 12px !important;
+    background-color: #f1f5f9 !important;
+    border-radius: 4px !important;
+  }
+
+  .song-nav-placeholder {
+    display: none !important;
   }
 
 }
